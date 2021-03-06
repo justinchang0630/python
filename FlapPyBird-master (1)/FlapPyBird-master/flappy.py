@@ -18,16 +18,15 @@ IMAGES, SOUNDS, HITMASKS = {}, {}, {}
 PLAYERS_LIST = (
     # red bird
     (
-        'assets/sprites/redbird-upflap.png',
+       'assets/sprites/redbird-upflap.png',
         'assets/sprites/redbird-midflap.png',
         'assets/sprites/redbird-downflap.png',
     ),
-    # blue bird
-    (
-        'assets/sprites/bluebird-upflap.png',
-        'assets/sprites/bluebird-midflap.png',
-        'assets/sprites/bluebird-downflap.png',
     ),
+    # blue bird
+    ('assets/sprites/bluebird-upflap.png',
+        'assets/sprites/bluebird-midflap.png',
+        'assets/sprites/bluebird-downflap.png',),
     # yellow bird
     (
         'assets/sprites/yellowbird-upflap.png',
@@ -312,7 +311,7 @@ def mainGame(movementInfo):
         visibleRot = playerRotThr
         if playerRot <= playerRotThr:
             visibleRot = playerRot
-        
+
         playerSurface = pygame.transform.rotate(IMAGES['player'][playerIndex], visibleRot)
         SCREEN.blit(playerSurface, (playerx, playery))
 
@@ -357,11 +356,6 @@ def showGameOverScreen(crashInfo):
         if playerVelY < 15:
             playerVelY += playerAccY
 
-        # rotate only when it's a pipe crash
-        if not crashInfo['groundCrash']:
-            if playerRot > -90:
-                playerRot -= playerVelRot
-
         # draw sprites
         SCREEN.blit(IMAGES['background'], (0,0))
 
@@ -372,7 +366,7 @@ def showGameOverScreen(crashInfo):
         SCREEN.blit(IMAGES['base'], (basex, BASEY))
         showScore(score)
 
-        
+
 
 
         playerSurface = pygame.transform.rotate(IMAGES['player'][1], playerRot)
