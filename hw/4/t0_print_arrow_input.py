@@ -4,10 +4,12 @@ Topic:請使用input輸入要印制的箭頭大小，最小為2行
 
 e.g.
 Please in row: 3
-   *   
-  ***  
- ***** 
-   *   
-   *   
-   *    
+   *
+  ***
+ *****
+   *
+   *
+   *
 """
+row= input(int(how many rows do you want:))
+print (row-1)+(row-2)+(r
