@@ -11,5 +11,5 @@ Please in row: 3
    *
    *
 """
-row= input(int(how many rows do you want:))
+row= int(input('how many rows do you want:'))
 print (row-1)+(row-2)+(r

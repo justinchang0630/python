@@ -5,10 +5,9 @@ e.g.
 turtle_stamp.jpg
 """
 import turtle
-for __ in range(5):
-    turtle.stamp()
-    turtle.penup()
+turtle.penup()
+for a in range(9):
     turtle.forward(150)
     turtle.stamp()
     turtle.home()
-    turtle.right(70)
+    turtle.right(45*a)
