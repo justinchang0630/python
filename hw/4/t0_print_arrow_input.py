@@ -12,4 +12,9 @@ Please in row: 3
    *
 """
 row= int(input('how many rows do you want:'))
-print (row-1)+(row-2)+(r
+for x in range(row):
+    show1 = (' ' * (row -x-1)) + ('*' * ( x * 2 +1))
+    print (show1)
+for y in range(row):
+    show2 = (' ' * (row-1)) + ('*')
+    print (show2)
